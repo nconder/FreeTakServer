@@ -8,19 +8,20 @@ class vars():
        self.GEOCHAT = 'GeoChat'
        self.FAIL = 'fail'
        self.EMPTY_BYTE = b''
-       self.DEFAULTPORT = 8087
-       self.LOGFILEPATH = 'log.log'
+       self.PORT = 8087
        self.STARTBUFFER = 32784
        self.BUFFER =513
        self.DELAY = 5
-       self.IP = 'YOUR_IP'
+       self.IP = 'Your IP'
        self.RENEWTIME = 1
        #logging config
-       self.LOGTIMEFORMAT = '%(levelname)s:%(asctime)s:%(message)s:%(lineno)d'
+       self.LOGFORMAT = '%(levelname)s : %(asctime)s : %(filename)s:%(lineno)d : %(message)s'
        self.LOGNAME = 'FTS'
-       self.WARNINGLOG = 'FTS_warning.log'
-       self.DEBUGLOG = 'FTS_debug.log'
-       self.INFOLOG = 'FTS_info.log'
+       self.LOGDIRECTORY = 'logs'
+       self.WARNINGLOG = f"{self.LOGDIRECTORY}/FTS_warning.log"
+       self.DEBUGLOG = f"{self.LOGDIRECTORY}/FTS_debug.log"
+       self.INFOLOG = f"{self.LOGDIRECTORY}/FTS_info.log"
+       self.HTTPLOG = f"{self.LOGDIRECTORY}/FTS_http.log"
        self.DELIMITER = ' ? '
        self.MAXFILESIZE = 100000
        self.BACKUPCOUNT = 5
@@ -36,7 +37,7 @@ class vars():
        self.PUT = 'PUT'
        self.POST = 'POST'
        self.DATAPACKAGEFOLDER = 'DataPackages'
-       self.versionInfo = 'FreeTAKServer-0.7.0.3-Alpha'
+       self.versionInfo = 'FreeTAKServer-0.7.0.2-Alpha'
        self.NodeID = 'Public-FTS'
        self.VERSIONJSON = '{"version":"2","type":"ServerConfig", "data":{"version": "%s", "api": "2","hostname":"%s"}, "nodeId":"%s"}' % (self.versionInfo, self.IP ,self.NodeID)
        self.HTTPDEBUG = False
